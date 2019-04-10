@@ -1,20 +1,15 @@
 version: '3'
 
 services:
-  dev_mysql:
-    container_name: dev_mysql
-    image: mysql:5
+  dev_pgsql:
+    container_name: dev_pgsql
+    image: postgres
     ports:
-      - '3306:3306'
+      - '5432:5432'
     environment:
-      - MYSQL_ROOT_PASSWORD=passw0rd
-      - MYSQL_ROOT_HOST=%
-#      - MYSQL_DATABASE=dev_mapp_db
-      - MYSQL_USER=testuser
-      - MYSQL_PASSWORD=passw0rd
-    volumes:
-      - ./mysql/conf/mysqld.cnf:/etc/mysql/my.cnf
-      - ./mysql/initsql:/docker-entrypoint-initdb.d
+      - POSTGRES_DB=hello_dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
 
   dev_redis:
     container_name: dev_redis
