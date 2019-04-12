@@ -34,3 +34,5 @@ Plug.Adapters.Cowboy.http MyApp
 ## ref
 https://becoming-functional.com/building-a-rest-api-with-phoenix-and-elixir-b12dcec302c5
 
+## libs
+kaffe, kafka_ex
